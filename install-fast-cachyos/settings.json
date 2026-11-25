@@ -1,0 +1,34 @@
+{
+    "menus": 1,
+    "headless_mode": true,
+    "fs_name": "btrfs",
+    "subvolumes": "default",
+    "device": "/dev/nvme0n1",
+    "partitions": [
+        {
+            "name": "/dev/nvme0n1p1",
+            "mountpoint": "/boot",
+            "size": "1G",
+            "fs_name": "vfat",
+            "type": "boot"
+        },
+        {
+            "name": "/dev/nvme0n1p2",
+            "mountpoint": "/",
+            "size": "100%",
+            "type": "root"
+        }
+    ],
+    "hostname": "tp1",
+    "locale": "en_US.UTF-8",
+    "xkbmap": "us",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "user_name": "tp1",
+    "user_pass": "setpass",
+    "user_shell": "/usr/bin/fish",
+    "root_pass": "setpass",
+    "kernel": "linux-cachyos",
+    "desktop": "kde",
+    "bootloader": "grub",
+    "post_install": "/root/post-install"
+}
